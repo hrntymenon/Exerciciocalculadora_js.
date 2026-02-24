@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios de Funções</title>
+</head>
+<body>
+
+    <h2>Contar Vogais</h2>
+    <input type="text" id="texto" placeholder="Digite um texto">
+    <button onclick="executarContarVogais()">Contar Vogais</button>
+    <p id="resultadoVogais"></p>
+
+    <h2> Fatorial</h2>
+    <input type="number" id="numeroFatorial" placeholder="Digite um número">
+    <button onclick="executarFatorial()">Calcular Fatorial</button>
+    <p id="resultadoFatorial"></p>
+
+    <h2> Conversor de Temperatura</h2>
+    <input type="number" id="celsius" placeholder="Celsius">
+    <button onclick="converterParaF()">C → F</button>
+
+    <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+    <button onclick="converterParaC()">F → C</button>
+    <p id="resultadoTemperatura"></p>
+
+    <h2> Média de um Array</h2>
+    <input type="text" id="arrayMedia" placeholder="Ex: 10,20,30">
+    <button onclick="executarMedia()">Calcular Média</button>
+    <p id="resultadoMedia"></p>
+
+    <h2> Filtrar Números Pares</h2>
+    <input type="text" id="arrayPares" placeholder="Ex: 1,2,3,4,5,6">
+    <button onclick="executarPares()">Mostrar Pares</button>
+    <p id="resultadoPares"></p>
+
+<script>
+    // 1) Contar Vogais
+   function contarVogais(texto) {
+    let contador = 0;
+    let vogais = "aeiouAEIOU";
+
+    for (let i = 0; i < texto.length; i++) {
+        if (vogais.includes(texto[i])) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+    // 2) Fatorial
+    function fatorial(n) {
+        if (n < 0) return "Número inválido";
+        if (n === 0) return 1;
+        let resultado = 1;
+        for (let i = 1; i <= n; i++) {
+            resultado *= i;
+        }
+        return resultado;
+    }
+
+    function executarFatorial() {
+        let numero = parseInt(document.getElementById("numeroFatorial").value);
+        document.getElementById("resultadoFatorial").innerText =
+            "Fatorial: " + fatorial(numero);
+    }
+
+    // 3) Conversões de Temperatura
+    function celsiusParaFahrenheit(c) {
+        return (c * 9/5) + 32;
+    }
+
+    function fahrenheitParaCelsius(f) {
+        return (f - 32) * 5/9;
+    }
+
+    function converterParaF() {
+        let c = parseFloat(document.getElementById("celsius").value);
+        document.getElementById("resultadoTemperatura").innerText =
+            "Fahrenheit: " + celsiusParaFahrenheit(c).toFixed(2);
+    }
+
+    function converterParaC() {
+        let f = parseFloat(document.getElementById("fahrenheit").value);
+        document.getElementById("resultadoTemperatura").innerText =
+            "Celsius: " + fahrenheitParaCelsius(f).toFixed(2);
+    }
+
+    // 4) Média de um Array
+    function calcularMedia(array) {
+        let soma = array.reduce((acc, val) => acc + val, 0);
+        return soma / array.length;
+    }
+
+    function executarMedia() {
+        let numeros = document.getElementById("arrayMedia").value
+            .split(",")
+            .map(Number);
+
+        document.getElementById("resultadoMedia").innerText =
+            "Média: " + calcularMedia(numeros);
+    }
+
+    // 5) Retornar apenas os pares
+    function filtrarPares(array) {
+        return array.filter(num => num % 2 === 0);
+    }
+
+    function executarPares() {
+        let numeros = document.getElementById("arrayPares").value
+            .split(",")
+            .map(Number);
+
+        document.getElementById("resultadoPares").innerText =
+            "Pares: " + filtrarPares(numeros).join(", ");
+    }
+</script>
+
+</body>
+</html>

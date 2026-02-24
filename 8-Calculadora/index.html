@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="card">
+
+    </div>
+    <!--Bloco JavaScript teste de controle-->
+    <script>
+        let opcao = prompt(
+            "Escolha um opção:\n"+
+            "1 - somar\n"+
+            "2 - subtrair\n"+
+            "3 - Multiplicar\n"+
+            "4 - Dividir\n"
+        );
+
+        let num1 = Number(prompt("Digite o Primeiro  Numero"));
+        let num2 = Number(prompt("Digite o Segundo Numero:"));
+
+        let resultado;
+
+        switch (opcao){
+            case "1":
+                resultado = num1+ num2;
+                alert("Resultado da soma:" + resultado);
+                break;
+            case "2":
+                resultado = num1-num2;
+                alert("Resultado da Subtração" + resultado);
+                break;
+            case "3":
+                resultado = num1 * num2; 
+                alert("Resultado da Multiplicação" + resultado);
+                break;
+            case "4": 
+                if(num2 !== 0){
+                    resultado = num1 / num2;
+                    alert("resultado da divisão:" + resultado);
+                } else {
+                    alert("Erro: Divisão por zero não é permitida. ");
+                }
+                break;
+            default:
+                alert("Opção inválida!");
+
+        }
+        </script>

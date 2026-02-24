@@ -1,0 +1,28 @@
+
+
+<button onclick="dados()" class="btn">Clique Aqui </button>
+   <div class="card" id="resultado"></div>
+
+
+
+
+<!--Bloco JavaScript- Teste de controle-->
+<script>
+    function mostrarMensagem() {
+        alert("Você clicou no botão");
+        console.log("você clicou no botão- Console");
+    }
+    
+ function dados() {
+    let nome = prompt("Digite o seu nome");
+    let idade = Number(prompt("Digite sua idade"));
+    let cidade = prompt("Digite sua cidade");
+    let curso = prompt("Digite o curso que você esta fazendo");
+    let email = prompt("Digite seu email");
+
+       alert( "Nome: " + nome + 
+        "Idade: " + idade + 
+        "Cidade: " + cidade  +
+        "Curso: " + curso + 
+        "Email: " + email)  }
+        </script>

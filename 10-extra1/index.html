@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="card">
+
+    </div>
+
+<!--Bloco JavaScript teste de controle-->
+<script>
+    //criar um jeito de usar a virgula no lugar do ponto
+    function verificarAprovacao(){
+        let nome = prompt("Digite seu nome: ");
+
+        let nota = Number (prompt("digite sua nota: "));
+        console.log("Nota digitada: " + nota );
+
+        if (nota >=7){
+            console.log("Parabéns, " + nome + "você foi aprovado!");
+            alert("Parabéns, " + nome + "você foi aprovado!");
+        }
+        else if (nota <7 && nota >0){
+           console.log ("Que pena, " + nome + "você foi reprovado!");
+            alert("Que pena, " + nome + "você foi reprovado!");
+        }else {
+            console.log("valor inválido");
+        }
+
+
+
+    }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="card">
+
+    </div>
+
+<h2> contador</h2>
+<body>
+    <button onclick="diminuir()"></button>
+    <span id="valor">0</span>
+    <button onclick="aumentar()"></button>
+    <br>
+    <br>
+
+    <div class="card">
+
+    </div>
+<script>
+    let contador = 0;
+
+        function aumentar(){
+            contador ++;
+            atualizartela()
+        }
+        function diminuir(){
+            contador --;
+            atualizartela()
+        }
+        function atualizartela(){
+            document.getElementbtId("Valor").innertext = contador;
+        }
+
+</script>
