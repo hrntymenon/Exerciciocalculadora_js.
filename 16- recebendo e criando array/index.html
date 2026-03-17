@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Corrigido</title>
+    <link rel="stylesheet" >
+</head>
+<body>
+    <div class="card"></div>
+
+<script>
+    // 1. Mudamos para o plural 'nomes' para ficar claro que é uma lista
+    let nomes = []; 
+
+    for (let i = 0; i < 5; i++) {
+        // 2. Usamos 'entrada' para não confundir com o array 'nomes'
+        let entrada = prompt("Digite o nome " + (i + 1) + ":");
+        
+        // 3. Adicionamos a entrada ao array
+        nomes.push(entrada);
+    }
+
+    console.log("Nomes digitados:");
+    // 4. Corrigido para i < nomes.length
+    for (let i = 0; i < nomes.length; i++) {
+        console.log(nomes[i]);
+    }
+
+    // 5. Criamos o alert com todos os nomes enviados
+    // O .join(", ") transforma o array em uma frase bonita
+    alert("Os nomes enviados foram:\n" + nomes.join(", "));
+
+    let nomesExibidos = "";
+    for (let i=0;i<nome.length; i++){
+    nomesExibidos += "nome" + (i+1) + ":" + nomes[i]
+    }
+    alert(nomesExibidos) 
+
+</script>
+</body>
+</html>

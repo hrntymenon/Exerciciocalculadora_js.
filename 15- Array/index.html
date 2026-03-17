@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Corrigido</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card"></div>
+
+<script>
+    // 1. Nomes que começam com A
+    let nomes3 = ["Ana", "Bruno", "Henry", "Gael", "Helena", "Isabelli", "Poliana", "Beatriz", "Alexandre", "Antonela"];
+
+    console.log("--- Nomes que começam com A ---");
+    // Corrigido: usando nomes3 (o nome da variável declarada)
+    nomes3.forEach(element => {
+        if (element[0] === "A") {
+            console.log(element);
+        }
+    });
+
+    // 2. Números pares
+    let numeros2 = [2, 5, 3, 7, 8, 12, 18, 6, 9, 23];
+    console.log("--- Números Pares ---");
+    // Corrigido: usando numeros2
+    numeros2.forEach(element => {
+        if (element % 2 === 0) {
+            console.log(element);
+        }
+    });
+
+    // 3. Maiores que 5
+    let num2 = [3, 5, 6, 2, 12, 1, 65, 4, 23, 47];
+    console.log("--- Números maiores que 5 ---");
+    // Corrigido: usando num2
+    num2.forEach(element => {
+        if (element > 5) {
+            console.log(element);
+        }
+    });
+
+    // 4. Nomes palíndromos
+    let listaPalindromos = ["Ana", "João", "Radar", "Dev", "Arara", "GitHub", "Banana", "Otto", "Bob", "Isabelli"];
+
+    console.log("--- Nomes Palíndromos ---");
+    listaPalindromos.forEach(nomeOriginal => {
+        let nomeLimpo = nomeOriginal.toLowerCase();
+        let nomeInvertido = nomeLimpo.split('').reverse().join('');
+
+        if (nomeLimpo === nomeInvertido) {
+            console.log(nomeOriginal);
+        }
+    });
+</script>
+</body>
+</html>

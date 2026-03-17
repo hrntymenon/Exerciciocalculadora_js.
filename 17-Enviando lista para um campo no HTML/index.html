@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<hmtl lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title> JavaScript </title>
+    </head>
+        <body>
+    <h1>Nomes </h1>
+    
+    <div class="card">
+        <ul id="listaNomes"></ul>
+    </div>
+        
+
+<script>
+    let nomes = [];
+
+       for (let i = 0; i < 3; i++){
+           let nome = prompt("Digite seu nome " + (i + 1 ) + ":");
+           nomes.push(nome);
+
+       }
+
+       let lista = document.getElementById("listaNomes");
+
+       for (let i = 0; i < nomes.length; i++){
+           let item = document.createElement("li");
+           item.innerText = nomes[i];
+           lista.appendChild(item);
+       }
+</script>
